@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import { Suspense } from 'react';
 const RiskHeatMap = ({ patients }) => {
   const getColor = (risk) => {
     if (risk >= 75) return 'bg-red-500';

@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import questionFlow from '@/app/data/chat';
 import { Button } from '@/components/ui/button';
 import { Heart, ArrowRight } from 'lucide-react';
-
+import { Suspense } from 'react';
 const ChatBot = () => {
   const [messages, setMessages] = useState([
     {
@@ -148,6 +148,11 @@ const ChatBot = () => {
   };
 
   return (
+    <>
+    <Suspense>
+
+
+   
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-gray-800 text-white py-6 px-8 flex items-center gap-3 sticky top-0 z-50">
@@ -244,6 +249,8 @@ const ChatBot = () => {
         </div>
       </div>
     </div>
+    </Suspense>
+    </>
   );
 };
 

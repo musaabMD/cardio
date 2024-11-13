@@ -8,7 +8,7 @@ import {
   MessageSquare, Heart, Brain, Activity, 
   ThumbsUp, AlertCircle, Stethoscope 
 } from 'lucide-react';
-
+import { Suspense } from 'react';
 // Sample data structure for heart failure patients
 const patientsData = {
     'John Doe': {
@@ -259,6 +259,11 @@ const Dashboard = () => {
   );
 
   return (
+    <>
+    <Suspense>
+
+
+  
     <div className="flex h-screen bg-gray-50">
       {/* Sidebar */}
       <div className="w-64 bg-white border-r border-gray-200 p-4">
@@ -398,6 +403,8 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    </Suspense>
+    </>
   );
 };
 

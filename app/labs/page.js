@@ -10,6 +10,7 @@ import {
   Droplet,
   AlertCircle 
 } from 'lucide-react';
+import { Suspense } from 'react';
 
 // Separate LabCard component with ranges passed as prop
 const LabCard = ({ title, data, metrics, IconComponent, ranges }) => (
@@ -290,6 +291,11 @@ const LabResultsDashboard = () => {
   if (!mounted || !selectedPatient) return null;
 
   return (
+    <>
+    <Suspense>
+
+
+ 
     <div className="flex min-h-screen bg-gray-50">
       {/* Patient Navigation */}
       <div className="w-72 bg-white shadow-lg">
@@ -429,6 +435,8 @@ const LabResultsDashboard = () => {
         </div>
       </div>
     </div>
+    </Suspense>
+    </>
   );
 };
 

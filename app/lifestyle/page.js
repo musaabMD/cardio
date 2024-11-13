@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { AlertCircle, Activity, Droplet, Users, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
+import { Suspense } from 'react';
 const LifestyleMetrics = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [selectedPatient, setSelectedPatient] = useState('P001');
@@ -89,6 +89,10 @@ const LifestyleMetrics = () => {
   };
 
   return (
+  <>
+  <Suspense>
+
+ 
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div className={`bg-white ${isSidebarOpen ? 'w-64' : 'w-20'} transition-all duration-300 border-r`}>
@@ -235,6 +239,8 @@ const LifestyleMetrics = () => {
         </Card>
       </div>
     </div>
+    </Suspense>
+    </>
   );
 };
 

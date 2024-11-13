@@ -3,7 +3,6 @@ import React, { Suspense, useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { AlertCircle, Activity, Brain, Users, Calendar, TrendingUp, Heart, Clock, Home, Coffee, Moon, Sun, Utensils, Smile, MessageCircle, Phone, Mail } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend } from 'recharts';
-import { Suspense } from 'react';
 const DetailedQoLDashboard = () => {
   // Mock data for patients
   const patientsData = {

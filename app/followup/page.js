@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertTriangle, Clock, Calendar, ChevronRight, UserCircle, AlertCircle } from 'lucide-react';
-
+import { Suspense } from 'react';
 const patients = [
   {
     id: "P001",
@@ -112,6 +112,10 @@ const PatientMonitoringDashboard = () => {
   };
 
   return (
+    <>
+    <Suspense>
+
+  
     <div className="flex h-screen bg-gray-100">
       {/* Patient List Sidebar */}
       <div className="w-64 bg-white border-r overflow-y-auto">
@@ -221,6 +225,8 @@ const PatientMonitoringDashboard = () => {
         </div>
       </div>
     </div>
+    </Suspense>
+    </>
   );
 };
 
