@@ -1,7 +1,6 @@
 "use client"
 import React, { Suspense, useState } from 'react';
 import { AlertTriangle, Users, ArrowUp, ArrowDown, AlertCircle, Search } from 'lucide-react';
-import { Suspense } from 'react';
 const patientData = [
   {
     id: 1,
